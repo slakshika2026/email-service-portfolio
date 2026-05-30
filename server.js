@@ -18,8 +18,9 @@ app.use(
       "https://sanduni-lakshika-portfolio.vercel.app",
       "https://sanduni-lakshika.site",
       "https://www.sanduni-lakshika.site",
+      /https:\/\/sanduni-lakshika-portfolio.*\.vercel\.app$/, // ✅ allows all preview URLs
     ], // Update this when you deploy
-    methods: ["POST", "GET"],
+    methods: ["POST", "GET", "PATCH", "DELETE"], // Allowed HTTP methods
   }),
 );
 
