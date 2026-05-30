@@ -13,8 +13,14 @@ app.use(express.json());
 // CORS Configuration
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://your-portfolio-domain.com"], // Update this when you deploy
-    methods: ["POST", "GET"],
+    origin: [
+      "http://localhost:5173",
+      "https://sanduni-lakshika-portfolio.vercel.app",
+      "https://sanduni-lakshika.site",
+      "https://www.sanduni-lakshika.site",
+      /https:\/\/sanduni-lakshika-portfolio.*\.vercel\.app$/, // ✅ allows all preview URLs
+    ], // Update this when you deploy
+    methods: ["POST", "GET", "PATCH", "DELETE"], // Allowed HTTP methods
   }),
 );
 
